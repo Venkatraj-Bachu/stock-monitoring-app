@@ -20,7 +20,7 @@ class Twilio:
         :param to_phone: (type) str - Phone you want to send the message to
         :param message: (type) str - The message you want to send.
             default value: ''
-        :return: Message status
+        :return: Message status The message SID, which identifies the message's status.
         """
         message = self.client.messages.create(
             body=f"{message}",
