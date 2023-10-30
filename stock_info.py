@@ -50,7 +50,16 @@ class StockData:
         :return: (type)dict - returns the list of stock data {open_price: type(float),
                                                                 day_high: type(float), day_low: type(float),
                                                                 close_price: type(float)}
+        Example:
+            
+            {
+                'open_price': 123.45,
+                'day_high': 128.0,
+                'day_low': 121.0,
+                'close_price': 125.0
+            }
         """
+        
         if self.api_call_valid:
             try:
                 req_date = today - datetime.timedelta(days=day)
